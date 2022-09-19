@@ -26,22 +26,21 @@ computerSelection = computerSelection.toUpperCase();
 let playerSelection = getPlayerChoice();
 playerSelection = playerSelection.toUpperCase();
 
-// Check tie
+// Check for tie
 if (computerSelection === playerSelection) {
-    console.log('Tie!');
-    alert(`Computer: ${computerSelection} \nPlayer: ${playerSelection} \n\nTie!`)
-}
-// Check computer wins
-else if (((computerSelection = 'rock') && (playerSelection = 'scissors')) 
-    || ((computerSelection = 'paper') && (playerSelection = 'rock')) 
-    || ((computerSelection = 'scissors') && (playerSelection = 'paper'))) {
-    console.log('Computer wins!');
-    alert(`Computer: ${computerSelection} \nPlayer: ${playerSelection} \n\nComputer wins!`)
-}
-// Check player wins
-else if (((computerSelection = 'rock') && (playerSelection = 'paper'))
-    || ((computerSelection = 'paper') && (playerSelection = 'scissors')) 
-    || ((computerSelection = 'scissors') && (playerSelection = 'rock'))) {
-    console.log('Player wins!');
-    alert(`Computer: ${computerSelection} \nPlayer: ${playerSelection} \n\nPlayer wins!`)
+    alert(`Tie! ${playerSelection} does not beat ${computerSelection}`);
+} 
+
+// Check for computer win
+else if (((computerSelection = 'ROCK') && (playerSelection = 'SCISSORS')) 
+    || ((computerSelection = 'PAPER') && (playerSelection = 'ROCK')) 
+    || ((computerSelection = 'SCISSORS') && (playerSelection = 'PAPER'))) {
+    alert(`COMPUTER WINS`);
+} 
+
+// Check for player win
+else if (((playerSelection = 'ROCK') && (computerSelection = 'SCISSORS')) 
+    || ((playerSelection = 'PAPER') && (computerSelection = 'ROCK')) 
+    || ((playerSelection = 'SCISSORS') && (computerSelection = 'PAPER'))) {
+    alert(`PLAYER WINS!`)
 }
