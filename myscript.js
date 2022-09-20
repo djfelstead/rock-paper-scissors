@@ -28,21 +28,21 @@ function playRound(computerSelection, playerSelection) {
     computerSelection = getComputerChoice();
     playerSelection = getPlayerChoice();
     if (computerSelection === playerSelection) {
-        console.log(`\nTIE!`);
+        console.log(`Tie`);
     } 
 // Check for computer win
     else if (((computerSelection === 'ROCK') && (playerSelection === 'SCISSORS')) 
         || ((computerSelection === 'PAPER') && (playerSelection === 'ROCK')) 
         || ((computerSelection === 'SCISSORS') && (playerSelection === 'PAPER'))) {
         computerScore++;
-        console.log(`\nCOMPUTER WINS!`);
+        console.log(`Computer wins`);
     } 
 // Check for player win
     else if (((playerSelection === 'ROCK') && (computerSelection === 'SCISSORS')) 
         || ((playerSelection === 'PAPER') && (computerSelection === 'ROCK')) 
         || ((playerSelection === 'SCISSORS') && (computerSelection === 'PAPER'))) {
         playerScore++;
-        console.log(`\nPLAYER WINS!`)
+        console.log(`Player wins`)
     }
 }
 
@@ -52,10 +52,10 @@ function game() {
         playRound();
     }
     if (playerScore > computerScore) {
-        console.log(`\nPlayer wins overall by ${playerScore} rounds to ${computerScore}`);
+        console.log(`\nPlayer wins by ${playerScore} rounds to ${computerScore}`);
     }
     else if (computerScore > playerScore) {
-        console.log(`\nComputer wins overall by ${computerScore} rounds to ${playerScore}`);
+        console.log(`\nComputer wins by ${computerScore} rounds to ${playerScore}`);
     }
     playerScore = 0; // reset playerScore counter
     computerScore = 0; // reset computerScore counter
